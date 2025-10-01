@@ -10,13 +10,13 @@
 
 1. pembuatan topologi 
 
-![alt text](/Modul%201/image/image_1.png)
+![alt text](image/image_1.png)
 
 Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 akan menuju ke dua Ainur yaitu Melkor dan Manwe. Sedangkan Switch 2 akan menuju ke dua Ainur lainnya yaitu Varda dan Ulmo. Keempat Ainur tersebut diberi perintah oleh Eru untuk menjadi Client.
 
 2. Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
 
-![alt text](/Modul%201/image/image_2.png)
+![alt text](image/image_2.png)
 
 Dari sini dapat dilihat bahwa setelah dilakukan ping kepada google.com memandakan bahwa eru dapat tersambung dengan internet
 
@@ -24,7 +24,7 @@ Dari sini dapat dilihat bahwa setelah dilakukan ping kepada google.com memandaka
 
 Pada setiap config client diberi tambahan `echo "nameserver 192.168.122.1" > /etc/resolv.conf` dengan konfigurasi ini, setiap client dapat berkomunikasi lintas subnet melalui Router.
 
-![alt text](/Modul%201/image/image_3.png)
+![alt text](image/image_3.png)
 
 nah dari sini itu dicoba nge ping dari melkor ke varda ` ping -c 4 192.223.2.2 `
 
@@ -32,7 +32,7 @@ nah dari sini itu dicoba nge ping dari melkor ke varda ` ping -c 4 192.223.2.2 `
 
 lakukan `ping google.com -c 3` pada semua client agar memastikan semua tersambung ke internet
 
-![alt text](/Modul%201//image/image_4.png)
+![alt text](image/image_4.png)
 
 5. Eru dan para Ainur lainnya meminta agar semua konfigurasi tidak hilang saat semua node di restart.
 
@@ -44,13 +44,13 @@ Dengan menambahkan
 
 Biar konfigurasi nggak hilang setelah restart, IP static ditulis di /root/.bashrc , aturan NAT disimpan pakai iptables-persistent, IP forwarding diaktifin lewat /etc/resolv.conf, dan DNS juga diset supaya client tetap bisa internetan.
 
-![alt text](/Modul%201/image/image_5.png)
+![alt text](image/image_5.png)
 
 6. Melkor Menyusup dengan mengnalisis Paket Komunikasi Manwe dan Eru dengan Wireshark
 
 Dimulai dengan mengunduh file traffic.zip di client melkor dan kemudian menjalankan file tersebut setelah di ekstrak `./traffic.sh`  Lalu jalankan capture agar file dianalisis di wireshark dan setelah itu semua paket bisa di jadikan dalam satu file `nomor6.pcapng` 
 
-![alt text](/Modul%201//image/image_6.png)
+![alt text](image/image_6.png)
 
 7. Konfigurasi FTP Server pada Node Eru
 
@@ -60,8 +60,8 @@ Untuk meningkatkan keamanan, Eru membuat sebuah FTP Server di node miliknya meng
 
 Dari screenshot di bawah ini itu menunjukkan bagaimana perbandingan dari dua user yang dimana ada yang bisa melakukan `put cobalagi.txt` dan apabila tidak bisa maka user tidak akan bisa untuk login ftp.
 
-![alt text](/Modul%201/image/image_7.png)
-![alt text](/Modul%201/image/image_7_1.png)
+![alt text](image/image_7.png)
+![alt text](image/image_7_1.png)
 
 8. Ulmo Mengirimkan Data Ramalan Cuaca ke Eru via FTP
 
@@ -71,15 +71,15 @@ Langkah yang dilakukan yaitu mengunduh file cuaca.zip, mengekstraknya, lalu mela
 
 Screenshot di bawah ini menunjukkan proses upload file berhasil dilakukan menggunakan user ainur.
 
-![alt text](/Modul%201/image/image_8.png)
+![alt text](image/image_8.png)
 
 9. 
 
 10. 
-![alt text](/Modul%201/image/image_10.png)
+![alt text](image/image_10.png)
 
 ### 11. 
-![alt text](/Modul%201/image/image_11.png)
+![alt text](image/image_11.png)
 
 ### 14.
 1.How many packets are recorded in the pcapng file?
