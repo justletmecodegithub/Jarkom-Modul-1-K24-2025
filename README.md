@@ -337,7 +337,7 @@ jawaban:`749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18`
 
 flag: `KOMJAR25{M4ster_4n4lyzer_Abw2BG39IEh70I8BfAncc0LB6}`
 
-###18.
+### 18.
 1.How many files are suspected of containing malware?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/ea0a3c28-22c0-4710-b4ba-6e9f09b2ab64" />
 filter .exe bertemu 2 file execute 
@@ -366,7 +366,7 @@ jawaban:`cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560`
 
 flag: `KOMJAR25{Y0u_4re_g0dl1ke_HHvStq6go8zdzcGBZwkFntYLC}`
 
-###19.
+### 19.
 1.Who sent the threatening message?
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/e27e566c-e46e-4b85-ab80-166bf0f729a1" />
 karena yang mail from hanya dari Yourlife 
