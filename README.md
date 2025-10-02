@@ -84,22 +84,32 @@ Screenshot di bawah ini menunjukkan proses upload file berhasil dilakukan menggu
 ### 14.
 1.How many packets are recorded in the pcapng file?
 ![WhatsApp Image 2025-10-01 at 22 09 12_7b264e42](https://github.com/user-attachments/assets/e9cd1ec4-0904-49d1-8c06-33f310d98d29)
-bisa kita liat berapa banyak packet, di paling bawah packet jawaban:`500358`
+bisa kita liat berapa banyak packet, di paling bawah packet 
+
+jawaban:`500358`
 
 2.What are the user that successfully logged in?
 ![WhatsApp Image 2025-10-01 at 22 26 59_89b2a6b5](https://github.com/user-attachments/assets/18e97553-e560-4613-9b87-d0da282e547f)
 kita filter dengan mencari stream yang ada succesnya
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/c936e205-f2c6-484f-a9af-cd7b302fb9bd" />
-bisa kita follow tcp stream melihat username dan password jawaban:`n1enna:y4v4nn4_k3m3nt4r1`
+bisa kita follow tcp stream melihat username dan password 
+
+jawaban:`n1enna:y4v4nn4_k3m3nt4r1`
 
 3.In which stream were the credentials found?
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/483aaa02-9b1f-4a67-8475-a92ec26534e8" />
-bisa diliat diatas tcp.stream eq jawaban:`41284`
+bisa diliat diatas tcp.stream eq 
+
+jawaban:`41284`
+
+flag: `KOMJAR25{Brut3_F0rc3_IUXMDbJqq9wghmoDOntUFErIm}`
 
 ### 15.
 1.What device does Melkor use?
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/b9c1c299-3ae2-4e3e-a76f-ce0f566c655b" />
-di HID data terlihatseperti keyboard jawaban:`Keyboard`
+di HID data terlihatseperti keyboard 
+
+jawaban:`Keyboard`
 
 2.What did Melkor write?
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/aaaf2c16-c076-426e-add7-df9685216a7d" />
@@ -251,18 +261,26 @@ jawaban: `UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=`
 
 3.What is Melkor's secret message?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/82a7ed9c-b561-4404-bc5c-04aa51502aba" />
-karena terlihat = maka ini adalah base64, dengan itu tinggal di decode jawaban: `Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd`
+karena terlihat = maka ini adalah base64, dengan itu tinggal di decode 
+
+jawaban: `Plz_pr0v1de_y0ur_us3rn4me_4nd_p4ssw0rd`
+
+flag: `KOMJAR25{K3yb0ard_W4rr10r_3qrsyWL6uV47HBwqa6dmLgmEc}`
 
 ### 16.
 1.What credential did the attacker use to log in?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/9bc011de-4674-4b21-9f9c-d9eb06901a56" />
 karena kita disuruh mecari username dan login , maka kita filter dengan user
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/d480c5e7-4f8e-4781-9225-2a06e5dab6fa" />
-dan kita tcp stream dan mendapatkan username dan password jawaban: `ind@psg420.com:{6r_6e#TfT1p`
+dan kita tcp stream dan mendapatkan username dan password 
+
+jawaban: `ind@psg420.com:{6r_6e#TfT1p`
 
 2.How many files are suspected of containing malware?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/3b6ab3e1-7472-4d28-adcf-fcded27a376f" />
-dari tcpstream tersebut kita bisa menghitung malware yang ada yaitu .exe jawaban:`5`
+dari tcpstream tersebut kita bisa menghitung malware yang ada yaitu .exe 
+
+jawaban:`5`
 
 3.What is the hash of the first file (q.exe)?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/6ae855de-1843-4b13-a75d-7fc121e8afc6" />
@@ -270,7 +288,9 @@ pertama kita tcpstream tpf-data karena artinya itu adalah paket yang mengtransfe
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/eba19fd9-c33e-4ce2-b779-67dff23a7768" />
 terus kita buat raw dan save
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/ba96c545-07a7-4738-959a-cfa06ec4748e" />
-dan kita buat file raw itu menjadi sha256 jawaban: `ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd`
+dan kita buat file raw itu menjadi sha256 
+
+jawaban: `ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd`
 
 4.What is the hash of the second file (w.exe)?
 lakukan sama seprti no 3 tetapi w.exe
@@ -292,54 +312,105 @@ lakukan sama seprti no 3 tetapi t.exe
 ![WhatsApp Image 2025-10-02 at 00 35 42_a85b1c38](https://github.com/user-attachments/assets/fcee6d17-c9ae-4b8d-8820-81c84f578987)
 jawaban:`10ce4b79180a2ddd924fdc95951d968191af2ee3b7dfc96dd6a5714dbeae613a`
 
+flag: `KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_M1K02DYlNwZZYaBmBdYpz7ZNE}`
+
 ### 17.
 1.What is the name of the first suspicious file?
 ![WhatsApp Image 2025-10-02 at 00 47 22_e05b2790](https://github.com/user-attachments/assets/177f47e8-2a4b-45b2-8a52-89694f50587b)
-setelah mengetahui yang exe ada hanya knr tetapi bukan jawabannya kita lihat di export http yang ada knr.exe, dan yang bisa ada file doc jawaban:`Invoice&MSO-Request.doc`
+setelah mengetahui yang exe ada hanya knr tetapi bukan jawabannya kita lihat di export http yang ada knr.exe, dan yang bisa ada file doc 
+
+jawaban:`Invoice&MSO-Request.doc`
 
 2.What is the name of the second suspicious file?
 ![WhatsApp Image 2025-10-02 at 00 47 22_e05b2790](https://github.com/user-attachments/assets/177f47e8-2a4b-45b2-8a52-89694f50587b)
-sekarang kita pakai knr.exe jawaban:`knr.exe`
+sekarang kita pakai knr.exe 
+
+jawaban:`knr.exe`
 
 3.What is the hash of the second suspicious file (knr.exe)?
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/76855de4-91eb-49cf-af49-55c87378b6f8" />
 pertama kita download terlebih dahulu
 ![WhatsApp Image 2025-10-02 at 01 28 26_56ddd29a](https://github.com/user-attachments/assets/293f9cff-89a3-412d-a857-3caebd698854)
-langsung saja jadikan sha256 jawaban:`749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18`
+langsung saja jadikan sha256 
+
+jawaban:`749e161661290e8a2d190b1a66469744127bc25bf46e5d0c6f2e835f4b92db18`
+
+flag: `KOMJAR25{M4ster_4n4lyzer_Abw2BG39IEh70I8BfAncc0LB6}`
 
 ###18.
 1.How many files are suspected of containing malware?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/ea0a3c28-22c0-4710-b4ba-6e9f09b2ab64" />
-filter .exe bertemu 2 file execute jawaban: `2`
+filter .exe bertemu 2 file execute 
+
+jawaban: `2`
 
 2.What is the name of the first malicious file?
+
 jawaban: `d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe`
 
 3.Apa nama file berbahaya yang kedua?
+
 jawaban: `oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe`
 
 4.What is the hash of the first malicious file?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/95165e75-c7cd-43c7-8513-ac802d61dbfc" />
-save file pertama dan  buat sdh256 jawaban:`59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040`
+save file pertama dan  buat sdh256 
+
+jawaban:`59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040`
 
 5.What is the hash of the second malicious file?
 <img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/bea73237-e822-4521-a454-5f0ed2af9439" />
-save file kedua dan buat sdh256 jawaban:`cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560`
+save file kedua dan buat sdh256 
+
+jawaban:`cf99990bee6c378cbf56239b3cc88276eec348d82740f84e9d5c343751f82560`
+
+flag: `KOMJAR25{Y0u_4re_g0dl1ke_HHvStq6go8zdzcGBZwkFntYLC}`
 
 ###19.
 1.Who sent the threatening message?
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/e27e566c-e46e-4b85-ab80-166bf0f729a1" />
-karena yang mail from hanya dari Yourlife jawaban:`Your Life`
+karena yang mail from hanya dari Yourlife 
+
+jawaban:`Your Life`
 
 2.How much ransom did the attacker demand ($)?
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/1c607d6c-0072-4e45-a32d-5e4c89bd560b" />
-dari tcpstream seorang recipient jawaban:`1600`
+dari tcpstream seorang recipient 
+
+jawaban:`1600`
 
 3.What is the attacker's bitcoin wallet?
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/1dfa8b86-aa36-4d75-add5-10947e46f6fc" />
-dari tcpstream yang sama jawaban:`1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3uyL`
+dari tcpstream yang sama 
 
-###20.
+jawaban:`1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3uyL`
+
+flag: `KOMJAR25{Y0u_4re_J4rk0m_G0d_55AnF4yHMwHwpYmFtfvm9ztQo}`
+
+### 20.
+1.What encryption method is used?
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/f04b86fb-e3c6-4368-bae6-3d2723dcce2f" />
+karena .txt yang dikirim untuk mengfilter adalah TLS Session Keys maka 
+
+jawaban:`TLS`
+
+2.What is the name of the malicious file placed by the attacker?
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/d359d93d-efd1-4956-a203-bdd91e00ca82" />
+pertama kita apply keylogger.txt
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/746c0fab-2cb1-49b4-822b-50578e33ded2" />
+karena suspicious biasanya bentuk url(.exe dan .dll) apalagi terdapat get yang berarti frame ini mengambil data 
+
+jawaban:`invest_20.dll`
+
+3.What is the hash of the file containing the malware?
+![WhatsApp Image 2025-10-02 at 08 38 53_af1a2379](https://github.com/user-attachments/assets/bd69b5ae-e87e-46d6-8fdf-ff131370edb1)
+tinggal kita save dan jadikan sha256 malicious filenya 
+
+jawaban:`31cf42b2a7c5c558f44cfc67684cc344c17d4946d3a1e0b2cecb8eb58173cb2f`
+
+flag: `KOMJAR25{B3ware_0f_M4lw4re_FtljfVwXzp2AtiZVdrR0ItDn3}`
+
+
 
 
 
