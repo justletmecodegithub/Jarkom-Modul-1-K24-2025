@@ -105,7 +105,7 @@ Lakukan koneksi SSH dari node Varda ke Eru, tangkap lalu lintasnya (PCAP) dengan
 
 ![alt text](image/image_13.png)
 ![alt text](image/image_13_1.png)
-![alt text](image/image_13_2.png~)
+![alt text](image/image_13_2.png)
 
 ### 14.
 1.How many packets are recorded in the pcapng file?
