@@ -20,7 +20,7 @@ Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 aka
 
 Dari sini dapat dilihat bahwa setelah dilakukan ping kepada google.com memandakan bahwa eru dapat tersambung dengan internet
 
-3. Setiap Ainur (Client) dapat terhubung satu sama lain
+### 3. Setiap Ainur (Client) dapat terhubung satu sama lain
 
 Pada setiap config client diberi tambahan `echo "nameserver 192.168.122.1" > /etc/resolv.conf` dengan konfigurasi ini, setiap client dapat berkomunikasi lintas subnet melalui Router.
 
@@ -28,13 +28,13 @@ Pada setiap config client diberi tambahan `echo "nameserver 192.168.122.1" > /et
 
 nah dari sini itu dicoba nge ping dari melkor ke varda ` ping -c 4 192.223.2.2 `
 
-4. Memastikan agar setiap Client dapat tersambung ke internet 
+### 4. Memastikan agar setiap Client dapat tersambung ke internet 
 
 lakukan `ping google.com -c 3` pada semua client agar memastikan semua tersambung ke internet
 
 ![alt text](image/image_4.png)
 
-5. Eru dan para Ainur lainnya meminta agar semua konfigurasi tidak hilang saat semua node di restart.
+### 5. Eru dan para Ainur lainnya meminta agar semua konfigurasi tidak hilang saat semua node di restart.
 
 Dengan menambahkan 
 `# root eru `
@@ -46,13 +46,13 @@ Biar konfigurasi nggak hilang setelah restart, IP static ditulis di /root/.bashr
 
 ![alt text](image/image_5.png)
 
-6. Melkor Menyusup dengan mengnalisis Paket Komunikasi Manwe dan Eru dengan Wireshark
+### 6. Melkor Menyusup dengan mengnalisis Paket Komunikasi Manwe dan Eru dengan Wireshark
 
 Dimulai dengan mengunduh file traffic.zip di client melkor dan kemudian menjalankan file tersebut setelah di ekstrak `./traffic.sh`  Lalu jalankan capture agar file dianalisis di wireshark dan setelah itu semua paket bisa di jadikan dalam satu file `nomor6.pcapng` 
 
 ![alt text](image/image_6.png)
 
-7. Konfigurasi FTP Server pada Node Eru
+### 7. Konfigurasi FTP Server pada Node Eru
 
 Untuk meningkatkan keamanan, Eru membuat sebuah FTP Server di node miliknya menggunakan vsftpd. Kali ini diminta untuk membuat user baru yaitu
 - ainur → memiliki hak akses write & read ke direktori /srv/ftp/shared.
@@ -63,7 +63,7 @@ Dari screenshot di bawah ini itu menunjukkan bagaimana perbandingan dari dua use
 ![alt text](image/image_7.png)
 ![alt text](image/image_7_1.png)
 
-8. Ulmo Mengirimkan Data Ramalan Cuaca ke Eru via FTP
+### 8. Ulmo Mengirimkan Data Ramalan Cuaca ke Eru via FTP
 
 Ulmo sebagai penjaga perairan perlu mengirimkan data ramalan cuaca ke node Eru melalui FTP Server yang sudah dikonfigurasi sebelumnya. Pada proses ini Ulmo bertindak sebagai FTP Client, sedangkan Eru sebagai FTP Server.
 
@@ -73,9 +73,12 @@ Screenshot di bawah ini menunjukkan proses upload file berhasil dilakukan menggu
 
 ![alt text](image/image_8.png)
 
-9. 
+### 9. 
 
-10. 
+### 10. Percobaan Serangan (Spam Ping) dari Melkor ke Eru
+
+Melkor yang marah mengirim banyak request (spam ping) ke Eru dimana kita akan lakukan percobaan ping 100 paket dari Melkor ke Eru, mengamati apakah ada packet loss dan mencatat average round-trip time (RTT) untuk melihat pengaruhnya terhadap kinerja Eru.
+
 ![alt text](image/image_10.png)
 
 ### 11. 
